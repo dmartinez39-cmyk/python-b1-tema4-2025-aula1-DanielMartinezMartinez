@@ -82,10 +82,25 @@ def create_list(length_list):
     the second one created in Heap by reusing the first list.
     """
 
-    # Write here your code
-    pass
+    if length_list <= 0:
+        raise ValueError("El valor debe ser mayor que 0")
+    
+    #RAM
+    ram_list = []
 
+    for i in range(length_list):
+        ram_list.append(random.randint(0, 100))
+
+    #return ram_list
+
+    #Heap
+    heap_list = copy.deepcopy(ram_list)
+
+    return (ram_list, heap_list)
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(create_list(6))
+try:
+    print(create_list(10))
+except ValueError as e:
+    print(f"Error: {e}")

@@ -37,11 +37,18 @@ Exemple:
 
 """
 def create_read_file():
-    # Write here your code
-    pass
+    nombre = input("¿Como te llamas? ")
+    apellido = input("¿Cual es tu apellido? ")
+    edad = input("Cuantos años tienes? ")
+
+    with open ('text_file.txt', 'w') as f:
+        f.write(f"Su nombre es: {nombre}\n")
+        f.write(f"Su apellido es: {apellido}\n")
+        f.write(f"Su edad es: {edad}\n")
+
 
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# create_read_file()
+create_read_file()

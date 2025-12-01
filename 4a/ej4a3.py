@@ -37,12 +37,21 @@ Exemple:
 
 
 def descending_list_iterator(numbers_list):
-    # Write here your code
-    pass
+    '''Ordenamos la lista de mayor a menor
+      usamos reverse=True porque la función sorted de normal ordena de menor a mayor'''
+    sorted_list = sorted(numbers_list, reverse=True)
+
+    return iter(sorted_list) #Iteramos la nueva lista ya ordenada
+
+print(descending_list_iterator)
+
+    
+
+
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
-# numeros = [2, 3, 6, 9, 11, 12, 15, 18]
-# print(list(descending_list_iterator(numeros)))  
+numeros = [2, 3, 6, 9, 11, 12, 15, 18]
+print(list(descending_list_iterator(numeros))) 

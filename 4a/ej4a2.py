@@ -44,11 +44,23 @@ Exemple:
 
 
 def count_fruits(fruits_list):
-    # Write here your code
-    pass
+
+    contador = {}  
+
+    for palabra in fruits_list:
+        if palabra in contador:
+            contador[palabra]  += 1 #Si la palabra esta en el diccionario le sumamos 1 al vslor
+        else:
+            contador[palabra] = 1 #Si la palabra no esta en el contador añadimos la palabra y le ponemos 1 al contador
+
+    return contador
+
+print(count_fruits)
+
+
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
-# fruits = ['apple', 'banana', 'orange', 'apple', 'kiwi', 'banana', 'kiwi', 'kiwi', 'kiwi']
-# print(count_fruits(fruits))
+fruits = ['apple', 'banana', 'orange', 'apple', 'kiwi', 'banana', 'kiwi', 'kiwi', 'kiwi']
+print(count_fruits(fruits))
